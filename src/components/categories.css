@@ -1,0 +1,23 @@
+ul.categories {
+  white-space: nowrap;
+  overflow: auto;
+}
+
+li.category {
+  display: inline-block;
+  /* font-family: Yekan; */
+  font-family: Yekan, sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+li.category.active button {
+  background: #2D4057;
+  color: #F3DECA;
+}
+
+@font-face {
+  font-family: Yekan;
+  /* src: url('/Yekan.ttf') */
+  src: url('./Yekan.ttf')
+}

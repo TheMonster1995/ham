@@ -1,0 +1,150 @@
+.counter-parent {
+  width: 7rem;
+}
+
+.counter-parent .add-btn {
+  font-size: .8rem;
+  letter-spacing: 1.4px;
+  font-weight: 100;
+  color: #F3DECA;
+  height: 2rem;
+  width: 3.5rem;
+}
+
+.counter-parent .add-btn:hover {
+  background-color: #2D4057;
+  border-color: #2D4057;
+  cursor: pointer;
+}
+
+.counter-content {
+  width: 3.5rem;
+  /* width: 6rem; */
+  height: 2rem;
+  background-color: #2D4057;
+  overflow: hidden;
+}
+
+.counter-content.open {
+  animation-name: counterStretch;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.counter-content.close {
+  animation-name: counterShrink;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.counter-content .count {
+  color: #F3DECA;
+}
+
+.counter-content button {
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.25rem;
+}
+
+.counter-content .counter-add-btn {
+  border-top-right-radius: .25rem !important;
+  transform: translateX(2rem);
+}
+
+.counter-content .counter-delete-btn {
+  border-top-left-radius: .25rem !important;
+  transform: translateX(-2rem);
+}
+
+.counter-content.open .counter-add-btn {
+  animation-name: endIn;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.counter-content.close .counter-add-btn {
+  animation-name: endOut;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  display: none;
+}
+
+.counter-content.open .counter-delete-btn {
+  animation-name: startIn;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.counter-content.close .counter-delete-btn {
+  animation-name: startOut;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  display: none;
+}
+
+@keyframes counterStretch {
+  0% {
+    width: 3.5rem;
+  }
+
+  100% {
+    width: 6rem;
+  }
+}
+
+@keyframes counterShrink {
+  0% {
+    width: 6rem;
+  }
+
+  100% {
+    width: 3.5rem;
+  }
+}
+
+@keyframes endIn {
+  0% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes endOut {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(2rem);
+  }
+}
+
+@keyframes startIn {
+  0% {
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes startOut {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-2rem);
+  }
+}

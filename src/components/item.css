@@ -1,0 +1,16 @@
+.t-label {
+  font-size: .6rem;
+  font-weight: 700;
+}
+
+.item-img-div {
+  position: absolute;
+  background: url('http://localhost:3000/cover.jpeg');
+  background-size: cover;
+  background-position: center;
+  height: calc(100% - .5rem);
+  /* width: calc(100% - 1rem); */
+  width: 100%;
+  z-index: -1;
+  top: 0;
+}
